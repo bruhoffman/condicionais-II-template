@@ -50,3 +50,65 @@ function escolherCartao(op) {
 }
 
 //escolherCartao(+prompt("Digite uma opção de cartão: \n1: Fácil 2: Black 3: Platinum 4: Master Gold"));
+
+// Exercício Prática Extra
+// IFs Aninhados
+/* function divisivelDoisTres(num) {
+    if (num % 2 === 0) {
+        if (num % 3 === 0) {
+            console.log("Número é divisível por 2 e por 3");
+        } else {
+            console.log("Número é somente divisível por 2.");
+        }
+    } else {
+        console.log("Digite outro número")
+    }
+} */
+
+// Operadores Lógicos
+function divisivelDoisTres(num) {
+    if (num % 2 === 0 && num % 3 === 0) {
+        console.log("Número é divisível por 2 e por 3");
+    } else {
+        console.log("Digite outro número")
+    }
+}
+//divisivelDoisTres(Number(prompt("Informe um número inteiro.")));
+
+function ifTernario() {
+    const num = Number(prompt("Digite um número inteiro"));
+    num === 30 ? console.log("Ufa, acertei!") : console.log("Não foi dessa vez :(")
+}
+
+//ifTernario();
+
+function adivinharNumero() {
+    const num = Number(prompt("Escolha um número inteiro:"));
+
+    switch (num) {
+        case 6:
+            console.log("Meia dúzia!")
+            break
+
+        case 12:
+            console.log("Uma dúzia!")
+            break
+
+        case 18:
+            console.log("Um ano e seis meses!")
+            break
+
+        case 24:
+            console.log("Tudo em 24x sem juros!")
+            break
+
+        case 30:
+            console.log("30 anos? Nem parece!")
+            break
+
+        default:
+            console.log("O número é maior que 30 ou menor que 6!")
+    }
+}
+
+//adivinharNumero();

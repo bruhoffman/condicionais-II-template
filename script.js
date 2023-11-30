@@ -3,8 +3,6 @@
     if (idade >= 13) {
         if (idade <= 17) {
             console.log("Seu dependente já pode ter um cartão de crédito vinculado ao seu!");
-        } else {
-            console.log("Consule outras possibilidades do Labank!");
         }
     } else {
         console.log("Consule outras possibilidades do Labank!");
@@ -22,27 +20,27 @@ const verificarIdade = function (idade) {
 //verificarIdade(17);
 
 // Exercício Prático 2
-const logarSistema = () => {
-    const usuario = confirm("Você possui conta? \nClique 'OK' para sim e 'Cancelar' para não.")
-    usuario === true ? console.log("Seja bem-vinda!") : console.log("Faça o login!")
+const possuiConta = () => {
+    const conta = confirm("Você possui conta? \nClique 'OK' para sim e 'Cancelar' para não.")
+    conta === true ? console.log("Seja bem-vindo!") : console.log("Faça o login!")
 }
 
-//logarSistema()
+//possuiConta()
 
 // Exercício Prático 3
 function escolherCartao(op) {
     switch (op) {
         case 1:
-            console.log(`Você escolheu a opção ${op}: "Fácil"`);
+            console.log(`Você escolheu a opção 1: "Cartão Fácil"`);
             break
         case 2:
-            console.log(`Você escolheu a opção ${op}: "Black"`);
+            console.log(`Você escolheu a opção 2: "Cartão Black"`);
             break
         case 3:
-            console.log(`Você escolheu a opção ${op}: "Platinum"`);
+            console.log(`Você escolheu a opção 3: "Cartão Platinum"`);
             break
         case 4:
-            console.log(`Você escolheu a opção ${op}: "Master Gold"`);
+            console.log(`Você escolheu a opção 3: "Cartão Master Gold"`);
             break
         default:
             console.log("Escolha umas das quatro opções disponíveis!");
@@ -57,8 +55,6 @@ function escolherCartao(op) {
     if (num % 2 === 0) {
         if (num % 3 === 0) {
             console.log("Número é divisível por 2 e por 3");
-        } else {
-            console.log("Número é somente divisível por 2.");
         }
     } else {
         console.log("Digite outro número")
@@ -69,46 +65,47 @@ function escolherCartao(op) {
 function divisivelDoisTres(num) {
     if (num % 2 === 0 && num % 3 === 0) {
         console.log("Número é divisível por 2 e por 3");
+        num === 30 ? console.log("Ufa, acertei!") : console.log("Não foi dessa vez :(")
     } else {
         console.log("Digite outro número")
     }
 }
+
 //divisivelDoisTres(Number(prompt("Informe um número inteiro.")));
 
-function ifTernario() {
-    const num = Number(prompt("Digite um número inteiro"));
-    num === 30 ? console.log("Ufa, acertei!") : console.log("Não foi dessa vez :(")
-}
+function divisivelDoisTres(num) {
 
-//ifTernario();
+    if (num % 2 === 0 && num % 3 === 0) {
+        console.log("Número é divisível por 2 e por 3");
 
-function adivinharNumero() {
-    const num = Number(prompt("Escolha um número inteiro:"));
+        switch (num) {
+            case 6:
+                console.log(`Acertou é ${num}!`)
+                break
 
-    switch (num) {
-        case 6:
-            console.log("Meia dúzia!")
-            break
+            case 12:
+                console.log(`Acertou é ${num}!`)
+                break
 
-        case 12:
-            console.log("Uma dúzia!")
-            break
+            case 18:
+                console.log(`Acertou é ${num}!`)
+                break
 
-        case 18:
-            console.log("Um ano e seis meses!")
-            break
+            case 24:
+                console.log(`Acertou é ${num}!`)
+                break
 
-        case 24:
-            console.log("Tudo em 24x sem juros!")
-            break
+            case 30:
+                console.log(`Acertou é ${num}!`)
+                break
 
-        case 30:
-            console.log("30 anos? Nem parece!")
-            break
+            default:
+                console.log("O número é maior que 30 ou menor que 6!")
+        }
 
-        default:
-            console.log("O número é maior que 30 ou menor que 6!")
+    } else {
+        console.log("Digite outro número")
     }
 }
 
-//adivinharNumero();
+//divisivelDoisTres(Number(prompt("Informe um número inteiro.")));
